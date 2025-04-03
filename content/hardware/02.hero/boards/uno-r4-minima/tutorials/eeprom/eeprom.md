@@ -24,9 +24,9 @@ The goals of this tutorials are:
 
 ## EEPROM
 
-Electronically erasable programmable read-only memory (EEPROM) is a memory that can be used to store data that can be retrieved after power loss. This memory can be effective to use during run-time to log data that can be used to re-initialize whenever a system comes back online.
+Electronically erasable programmable read-only memory (EEPROM) is a memory that can be used to store data that can be retrieved after power loss. The Renesas **RA4M1** MCU implements high-endurance **data-flash** memory which is different from the tradition byte-erasable EEPROM in that erase operates on a page.  In order to write to the data-flash, the targeted memory area must be in the erased state and as such a write to a previously written memory location will require an erase operation on the entire page.  While a write operation is relatively fast, the erase operation is quite slow.  This memory can be effective to use during run-time to log data that can be used to re-initialize whenever a system comes back online.
 
-The Arduino Uno R4 Minima has 8 kB of EEPROM.
+The Arduino Uno R4 Minima has 8 kB of EEPROM, implemented as eight 1KB pages.
 
 When writing to the EEPROM memory, we specify two parameters: the **address** and **value**. Each byte can hold a value between 0-255.
 
