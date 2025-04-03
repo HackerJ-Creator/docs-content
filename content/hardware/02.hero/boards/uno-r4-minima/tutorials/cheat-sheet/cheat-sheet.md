@@ -545,7 +545,7 @@ Identify the `dfu_minima.hex`
 **Step 4**
 Install the Renesas flash programmer ([download page](https://www.renesas.com/us/en/software-tool/renesas-flash-programmer-programming-gui))
 
-***The Renesas flash programmer is currently only available on Windows.***
+***The Renesas flash programmer is currently available for Windows (W10,W11), Linux(ARM32,ARM65,AMD64), and MacOS(ARM64).***
 
 **Step 5**
 Flash the bootloader using the Renesas programmer:
